@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        android:outlineSpotShadowColor="@color/startColor"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/CustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/metropolis_medium"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:text="Customer Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/PaymentTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/metropolis_medium"
+                android:textSize="16sp"
+                android:textColor="#A7A7AF"
+                android:text="Payment"
+                app:layout_constraintStart_toStartOf="@id/CustomerName"
+                app:layout_constraintTop_toBottomOf="@id/CustomerName" />
+
+            <TextView
+                android:id="@+id/NotReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_semibold"
+                android:textSize="16sp"
+                android:textColor="#F41E1E"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Not Received"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/PaymentTextview"
+                app:layout_constraintTop_toBottomOf="@id/PaymentTextview" />
+
+            <TextView
+                android:id="@+id/Delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_semibold"
+                android:text="Delivery"
+                android:textColor="@color/black"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/StatusColor"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:backgroundTint="#72C375"
+                app:cardCornerRadius="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Delivery"
+                app:layout_constraintStart_toStartOf="@+id/Delivery"
+                app:layout_constraintTop_toBottomOf="@+id/Delivery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
